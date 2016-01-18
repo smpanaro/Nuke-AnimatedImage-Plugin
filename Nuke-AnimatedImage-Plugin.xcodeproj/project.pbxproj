@@ -11,6 +11,10 @@
 		0C06D2331C11F47D00CC5C35 /* AnimatedImageLoaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C06D2311C11F47D00CC5C35 /* AnimatedImageLoaderDelegate.swift */; };
 		0C06D2391C11F62300CC5C35 /* FLAnimatedImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06D2371C11F62300CC5C35 /* FLAnimatedImage.framework */; };
 		0C06D23A1C11F62300CC5C35 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06D2381C11F62300CC5C35 /* Nuke.framework */; };
+		AA4A34B81C4D630900645F8F /* AnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C06D2301C11F47D00CC5C35 /* AnimatedImage.swift */; };
+		AA4A34B91C4D630900645F8F /* AnimatedImageLoaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C06D2311C11F47D00CC5C35 /* AnimatedImageLoaderDelegate.swift */; };
+		AA4A34BB1C4D63B500645F8F /* FLAnimatedImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA4A34BA1C4D63B500645F8F /* FLAnimatedImage.framework */; };
+		AA4A34BD1C4D63D200645F8F /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA4A34BC1C4D63D200645F8F /* Nuke.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		0C06D2351C11F4A900CC5C35 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C06D2371C11F62300CC5C35 /* FLAnimatedImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FLAnimatedImage.framework; path = Carthage/Build/iOS/FLAnimatedImage.framework; sourceTree = "<group>"; };
 		0C06D2381C11F62300CC5C35 /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
+		AA4A34B01C4D62BF00645F8F /* NukeAnimatedImagePlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeAnimatedImagePlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA4A34B41C4D62BF00645F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA4A34BA1C4D63B500645F8F /* FLAnimatedImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FLAnimatedImage.framework; path = Carthage/Build/tvOS/FLAnimatedImage.framework; sourceTree = "<group>"; };
+		AA4A34BC1C4D63D200645F8F /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/tvOS/Nuke.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +40,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AA4A34AC1C4D62BF00645F8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA4A34BD1C4D63D200645F8F /* Nuke.framework in Frameworks */,
+				AA4A34BB1C4D63B500645F8F /* FLAnimatedImage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -39,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				0C06D22F1C11F47D00CC5C35 /* Source */,
+				AA4A34B11C4D62BF00645F8F /* Nuke-AnimatedImage-Plugin */,
 				0C06D23B1C11F62700CC5C35 /* Frameworks */,
 				0C06D2251C11F3FF00CC5C35 /* Products */,
 				0C06D2341C11F4A900CC5C35 /* Supporting Files */,
@@ -49,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				0C06D2241C11F3FF00CC5C35 /* NukeAnimatedImagePlugin.framework */,
+				AA4A34B01C4D62BF00645F8F /* NukeAnimatedImagePlugin.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,16 +92,33 @@
 		0C06D23B1C11F62700CC5C35 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AA4A34BC1C4D63D200645F8F /* Nuke.framework */,
+				AA4A34BA1C4D63B500645F8F /* FLAnimatedImage.framework */,
 				0C06D2371C11F62300CC5C35 /* FLAnimatedImage.framework */,
 				0C06D2381C11F62300CC5C35 /* Nuke.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AA4A34B11C4D62BF00645F8F /* Nuke-AnimatedImage-Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				AA4A34B41C4D62BF00645F8F /* Info.plist */,
+			);
+			path = "Nuke-AnimatedImage-Plugin";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
 		0C06D2211C11F3FF00CC5C35 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA4A34AD1C4D62BF00645F8F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -110,6 +146,24 @@
 			productReference = 0C06D2241C11F3FF00CC5C35 /* NukeAnimatedImagePlugin.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		AA4A34AF1C4D62BF00645F8F /* Nuke tvOS Animated Image Plugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA4A34B51C4D62BF00645F8F /* Build configuration list for PBXNativeTarget "Nuke tvOS Animated Image Plugin" */;
+			buildPhases = (
+				AA4A34AB1C4D62BF00645F8F /* Sources */,
+				AA4A34AC1C4D62BF00645F8F /* Frameworks */,
+				AA4A34AD1C4D62BF00645F8F /* Headers */,
+				AA4A34AE1C4D62BF00645F8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Nuke tvOS Animated Image Plugin";
+			productName = "Nuke-AnimatedImage-Plugin";
+			productReference = AA4A34B01C4D62BF00645F8F /* NukeAnimatedImagePlugin.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -121,6 +175,9 @@
 				TargetAttributes = {
 					0C06D2231C11F3FF00CC5C35 = {
 						CreatedOnToolsVersion = 7.1;
+					};
+					AA4A34AF1C4D62BF00645F8F = {
+						CreatedOnToolsVersion = 7.2;
 					};
 				};
 			};
@@ -137,12 +194,20 @@
 			projectRoot = "";
 			targets = (
 				0C06D2231C11F3FF00CC5C35 /* Nuke iOS Animated Image Plugin */,
+				AA4A34AF1C4D62BF00645F8F /* Nuke tvOS Animated Image Plugin */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0C06D2221C11F3FF00CC5C35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA4A34AE1C4D62BF00645F8F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -158,6 +223,15 @@
 			files = (
 				0C06D2331C11F47D00CC5C35 /* AnimatedImageLoaderDelegate.swift in Sources */,
 				0C06D2321C11F47D00CC5C35 /* AnimatedImage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA4A34AB1C4D62BF00645F8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA4A34B81C4D630900645F8F /* AnimatedImage.swift in Sources */,
+				AA4A34B91C4D630900645F8F /* AnimatedImageLoaderDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +371,52 @@
 			};
 			name = Release;
 		};
+		AA4A34B61C4D62BF00645F8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = "Nuke-AnimatedImage-Plugin/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.kean.Nuke-AnimatedImage-Plugin";
+				PRODUCT_NAME = NukeAnimatedImagePlugin;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		AA4A34B71C4D62BF00645F8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = "Nuke-AnimatedImage-Plugin/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.kean.Nuke-AnimatedImage-Plugin";
+				PRODUCT_NAME = NukeAnimatedImagePlugin;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -317,6 +437,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		AA4A34B51C4D62BF00645F8F /* Build configuration list for PBXNativeTarget "Nuke tvOS Animated Image Plugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA4A34B61C4D62BF00645F8F /* Debug */,
+				AA4A34B71C4D62BF00645F8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
